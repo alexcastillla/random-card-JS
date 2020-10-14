@@ -5,15 +5,14 @@ import "../assets/img/4geeks.ico";
 //import 'breathecode-dom'; //DOM override to make JS easier to use
 import "../style/index.scss";
 
-// window.onload = function() {
-//   console.log("Hello Rigo from the console!");
-// };
-
 // El Ejercicio empieza aquí
 
-var submitbutton = document.querySelector("#form-submit");
-console.log(submitbutton);
-submitbutton.onclick = function() {
+// var submitbutton = document.querySelector("#form-submit");
+// console.log(submitbutton);
+// submitbutton.onclick = function() {
+//   pepe();
+// };
+document.querySelector("#submit").onclick = function() {
   pepe();
 };
 
@@ -35,9 +34,10 @@ function pepe() {
     cityImput == "" ||
     postalImput == ""
   ) {
-    alert("Rellenar datos vacios!");
+    error.style.display = "inline";
+    success.style.display = "none";
   } else {
-    alert("Ya esta completo!");
+    success.style.display = "inline";
   }
-  console.log(36);
+  return false;
 }

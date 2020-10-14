@@ -26,11 +26,21 @@
               <!-- Principal body -->
               <div class="card-body">
                 <!-- Alert! -->
-                <div class="alert alert-danger" role="alert">
-                  Some fields are missing!
+                <div
+                  class="alert alert-danger"
+                  role="alert"
+                  style="display: none"
+                  id="error"
+                >
+                  Some fields are missing! Check it out all the fields
                 </div>
-                <div class="alert alert-success" role="alert">
-                  Complete!
+                <div
+                  class="alert alert-success"
+                  role="alert"
+                  style="display: none"
+                  id="success"
+                >
+                  Completed!
                 </div>
                 <!-- Forms -->
                 <div class="form-row">
@@ -206,15 +216,15 @@
                   >
                     Cancel
                   </button>
+                  <button type="submit" class="btn btn-primary" id="submit">
+                    Send
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </form>
-      <button type="submit" class="btn btn-primary" id="form-submit">
-        Send
-      </button>
     </div>
 
     <!-- Optional JavaScript -->
