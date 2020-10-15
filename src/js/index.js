@@ -12,17 +12,22 @@ document.querySelector("#submit").onclick = function() {
 };
 
 function validation() {
-    var nameImput = document.querySelector("#first-name").value;
-    var lastnameImput = document.querySelector("#last-name").value;
-    var cardImput = document.querySelector("#cardNumber").value;
-    var inputCVV = document.querySelector("#inputCVV").value;
-    var amountImput = document.querySelector("#imputAmount").value;
-    var cityImput = document.querySelector("#city-name").value;
-    var postalImput = document.querySelector("#postal-code").value;
+  var nameImput = document.querySelector("#first-name").value;
+  var lastnameImput = document.querySelector("#last-name").value;
+  var cardImput = document.querySelector("#cardNumber").value;
+  var inputCVV = document.querySelector("#inputCVV").value;
+  var amountImput = document.querySelector("#imputAmount").value;
+  var cityImput = document.querySelector("#city-name").value;
+  var postalImput = document.querySelector("#postal-code").value;
 
   if (
-    nameImput == "" || lastnameImput == "" || cardImput == "" || inputCVV == "" ||
-    amountImput == "" || cityImput == "" || postalImput == ""
+    nameImput == "" ||
+    lastnameImput == "" ||
+    cardImput == "" ||
+    inputCVV == "" ||
+    amountImput == "" ||
+    cityImput == "" ||
+    postalImput == ""
   ) {
     error.style.display = "inline";
     success.style.display = "none";
