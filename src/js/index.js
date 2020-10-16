@@ -5,34 +5,38 @@ import "../assets/img/4geeks.ico";
 //import 'breathecode-dom'; //DOM override to make JS easier to use
 import "../style/index.scss";
 
+const cardNumber = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+const cardPalo = ["\2660FE0F", "\2665FE0F", "\2666FE0F", "\2663FE0F"];
+//  u picaus = "\u2660\uFE0F";
+//  u corauzon = "\u2665\uFE0F";
+//  u diamuantes = "\u2666\uFE0F";
+//  u trebuol = "\u2663\uFE0F";
+
 window.onload = () => {
-  const cardNumber = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
-  const cardPalo = [picas, corazon, diamantes, trebol];
-  const picas = "\u2660\uFE0F";
-  const corazon = "\u2665\uFE0F";
-  const diamantes = "\u2666\uFE0F";
-  const trebol = "\u2663\uFE0F";
-
-  function numberGenerator() {
-    return cardNumber[Math.round(Math.random() * (cardNumber.length - 1))];
+  function generadorCartas(index) {
+    return index[Math.round(Math.random() * (index.length - 1))];
   }
 
-  function paloGenerator() {
-    let paloResult = "";
+  document.querySelector("#numero").innerHTML = generadorCartas(cardNumber);
+  document.querySelectorAll("#pagina-palo").innerHTML = generadorCartas(
+    cardPalo
+  );
 
-    let randomNumberPalo =
-      cardPalo[Math.round(Math.random() * (cardPalo.length - 1))];
+  //   let palo = generadorCartas(cardPalo);
 
-    if (randomNumberPalo == picas || randomNumberPalo == trebol) {
-      paloResult = "black";
-    } else {
-      paloResult = "red";
-    }
-    return paloResult;
-  }
+  //   function cambioColor() {
+  //     if (palo == "\u2660\uFE0F" || palo == "\u2663\uFE0F") {
+  //       palo.classList.add("text-dark");
+  //     } else {
+  //       palo.classList.add("text-danger");
+  //     }
+  //     return;
+  //   }
+  //   document.querySelector("#cabecera-palo").innerHTML = cambioColor(palo);
 
-  console.log(paloGenerator());
-  paloGenerator();
-  console.log(numberGenerator());
-  numberGenerator();
+  //    = palofinal;
+
+  console.log(generadorCartas(cardPalo));
+  console.log(generadorCartas(cardNumber));
+  //   console.log(paloFinal);
 };
