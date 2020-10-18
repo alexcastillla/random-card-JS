@@ -15,6 +15,7 @@ const suitCard = ["\u2666", "\u2665", "\u2660", "\u2663"];
 
 window.onclick = () => {
   function generadorCartas(index) {
+    //Con la funcion generamos posiciones aleatoria en un Array
     return index[Math.round(Math.random() * (index.length - 1))];
   }
 
@@ -22,8 +23,13 @@ window.onclick = () => {
   let numberDisplay = generadorCartas(cardNumber);
 
   if (suitDisplay == "\u2666" || suitDisplay == "\u2665") {
-    document.querySelector("#top-suit").style.color = "red";
+    //Cuando tenemos un suit Diamond o Hearth
+    document.querySelector("#top-suit").style.color = "red"; // Aplicamos el color rojo especifico del suit
     document.querySelector("#bottom-suit").style.color = "red";
+  } else {
+    //Cuando tenemos un suit Spade o Club
+    document.querySelector("#top-suit").style.color = "black"; // Aplicamos el color negro de nuevo
+    document.querySelector("#bottom-suit").style.color = "black";
   }
 
   document.querySelector("#body-number").innerHTML = numberDisplay;
