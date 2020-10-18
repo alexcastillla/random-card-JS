@@ -7,11 +7,11 @@ import "../style/index.scss";
 //
 
 const cardNumber = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
-const suitCard = ["\u2666", "\u2660", "\u2665", "\u2663"];
+const suitCard = ["\u2666", "\u2665", "\u2660", "\u2663"];
 //  DIAMOND SUIT = "\u2666";
+//  HEARTH SUIT = "\u2665";
 //  SPADE SUIT = "\u2660";
-//  u corauzon = "\u2665";
-//  u trebuol = "\u2663";
+//  CLUB SUIT = "\u2663";
 
 window.onclick = () => {
   function generadorCartas(index) {
