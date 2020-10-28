@@ -14,7 +14,7 @@ const suitCard = ["\u2666", "\u2665", "\u2660", "\u2663"];
 //  CLUB SUIT = "\u2663";
 
 window.onclick = () => {
-  function generadorCartas(index) {
+  function generadorCartas[] {
     //Con la funcion generamos posiciones aleatoria en un Array
     return index[Math.round(Math.random() * (index.length - 1))];
   }
